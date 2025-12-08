@@ -59,3 +59,4 @@ export function showLoader() {
 export function hideLoader() {
   loaderWrapperEl.classList.add('is-hidden');
 }
+

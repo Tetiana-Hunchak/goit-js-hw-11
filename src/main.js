@@ -18,7 +18,8 @@ formEl.addEventListener('submit', onFormSubmit);
 function onFormSubmit(event) {
   event.preventDefault();
 
-  const searchValue = event.currentTarget.elements['search-text'].value.trim();
+  const form = event.currentTarget;
+  const searchValue = form.elements['search-text'].value.trim();
 
   
   if (!searchValue) {
@@ -58,6 +59,6 @@ function onFormSubmit(event) {
     })
     .finally(() => {
      
-      event.currentTarget.reset();
+      form.reset();
     });
 }
